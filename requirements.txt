@@ -9,3 +9,4 @@ numpy==1.26.4
 pillow>=10.0
 streamlit>=1.36
 av
+streamlit-webrtc
