@@ -238,7 +238,12 @@ elif detection_mode == "Live Video Stream":
         mode=WebRtcMode.SENDRECV,
         rtc_configuration=RTC_CONFIGURATION,
         video_processor_factory=lambda: PotholeDetectorProcessor(detection_model), # Pass the model
-        media_stream_constraints={"video": True, "audio": False}, # Only need video
+        media_stream_constraints={
+            "video": {
+                "facingMode": {"ideal": "environment"} # <--- Explicitly request back camera
+            }, 
+            "audio": False
+        },
         async_processing=True,
     )
     
@@ -271,3 +276,4 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
