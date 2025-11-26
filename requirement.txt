@@ -1,5 +1,11 @@
-streamlit
-ultralytics
-opencv-python-headless
-torch
-numpy
+# Use CPU-only PyTorch wheels (works on Streamlit Cloud)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.4.0
+torchvision==0.19.0
+torchaudio==2.4.0
+
+ultralytics==8.3.40
+opencv-python-headless==4.10.0.84
+numpy==1.26.4
+pillow>=10.0
+streamlit>=1.36
