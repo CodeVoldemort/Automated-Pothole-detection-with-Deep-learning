@@ -38,12 +38,12 @@ from PIL import Image
 import cv2
 
 MODEL_PATHS = {
-    "YOLOv5n": "./models/best.pt",
-    "YOLOv8n": "./models/v8.pt",
-    "YOLOv11n": "./models/best.pt"
+    "YOLOv5n": "best.pt",
+    "YOLOv8n": "v8.pt",
+    "YOLOv11n": "v11.pt"
 }
 
-SELECTED_MODEL = MODEL_PATHS["YOLOv5n"]
+SELECTED_MODEL = MODEL_PATHS["YOLOv11n"]
 detection_model = YOLO(SELECTED_MODEL)
 
 st.set_page_config(page_title="Pothole Detection", page_icon="🚧", layout="wide")
@@ -235,4 +235,5 @@ st.markdown("""
 <div style='text-align: center; color: gray;'>
     <small>Pothole Detection System | MSc Project 2025 | University of Hertfordshire</small>
 </div>
+
 """, unsafe_allow_html=True)
